@@ -1,0 +1,53 @@
+﻿<div class="col-md-2"></div>
+  <div class="col-md-9">
+
+  <ng-form name="addPostForm" >
+
+    <div class="row" style="margin-top: 50px;">
+
+        <div class="col-md-6">
+            <angucomplete required
+                          id="tvseries"
+                          placeholder="Search Tv Series"
+                          pause="400"
+                          selectedobject="post.Tvseries"
+                          url="{{baseUrl}}api/TvSeries/GetTvSeries?query="
+                          datafield="Results"
+                          titlefield="Name"
+                          inputclass="form-control"
+                          minlength="4" />
+        </div>
+
+        <div class="col-md-6">
+            <angucomplete required
+                          id="characters"
+                          placeholder="Search Characters or Actors"
+                          pause="400"
+                          titlefield="Character"
+                          selectedobject="post.Character"
+                          searchfields="Character,Name"
+                          inputclass="form-control"
+                          minlength="1"
+                          localdata="characters" />
+        </div>
+
+    </div>
+   
+    <div class="input-group col-md-7">
+        <input type="text" class="form-control" placeholder="Title" required aria-describedby="basic-addon1" ng-model="post.Title">
+    </div>
+
+    <text-angular ng-model="htmlVariable"></text-angular>
+
+
+    <div class="input-group col-md-12" style="margin-top:6px;">
+        <summernote height="300" required ng-model="post.postContent"></summernote>
+        <button type="button" class="btn btn-info col-md-offset-11" style="opacity: 6; margin-bottom: 20px;" ng-disabled="!addPostForm.$valid" ng-click="addPost(post);">Post</button>
+        </div>
+
+       
+
+</ng-form>
+</div>
+
+

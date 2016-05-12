@@ -1,0 +1,21 @@
+{
+  "name": "CastCult",
+  "authors": [
+    "Mudit Juneja <muditjuneja@outlook.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-tinymce": "latest",
+    "angular-local-storage": "^0.2.7"
+  }
+}

@@ -1,0 +1,62 @@
+﻿
+<style>
+    .form-signin {
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+</style>
+<div class="container" style="margin-bottom: 70px;">
+    <ul class="nav nav-tabs" style="margin-top: 30px;">
+        <li class="active"><a data-toggle="tab" href="" data-target="#menu1">Sign In</a></li>
+        <li><a data-toggle="tab" href="" data-target="#menu2">Forget Password</a></li>
+    </ul>
+
+    <div class="tab-content" style="border: 1px solid #d3d3d3; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; margin-bottom: 30px;">
+        <div id="menu1" class="tab-pane fade in active" >
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-8">
+                    <ng-form name="loginForm" class="form-signin">
+                        <h2 class="form-signin-heading">Welcome back</h2>
+                        <label for="inputEmail" class="sr-only">Email address</label>
+                        <input type="email" id="inputEmail" ng-model="loginData.Email" class="form-control" placeholder="Email address" required>
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" id="inputPassword" class="form-control" ng-model="loginData.Password" placeholder="Password" required>
+                        <!--<div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>-->
+                        <input class="btn btn-primary " style="float:right; margin-top:20px; margin-bottom:20px; opacity: 6;" ng-disabled="!loginForm.$valid" ng-click="grantAccess();" type="submit" value="Sign in" />
+
+                    </ng-form>
+                </div>
+                <div class="col-md-2">
+                </div>
+            </div>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-8">
+                    <ng-form name="forgetPasswordForm" class="form-signin">
+                        <h2 class="form-signin-heading">Get Password</h2>
+                        <label for="inputEmail" class="sr-only">Email address</label>
+                        <input type="email" id="inputEmail" ng-model="forgetPasswordData.Email" class="form-control" placeholder="Email address" required>
+
+                        <input class="btn btn-primary " style="float:right; margin-top:20px; margin-bottom:20px; opacity: 6;" ng-disabled="!forgetPasswordForm.$valid" ng-click="getPassword();" type="submit" value="Get Password" />
+
+                    </ng-form>
+                </div>
+                <div class="col-md-2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
